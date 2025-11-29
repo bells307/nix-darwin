@@ -1,0 +1,56 @@
+# Alacritty Configuration
+# Font configuration with Hack Nerd Font Mono
+
+font:
+  # Normal (roman) font face
+  normal:
+    family: "Hack Nerd Font Mono"
+    style: Regular
+
+  # Bold font face
+  bold:
+    family: "Hack Nerd Font Mono"
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: "Hack Nerd Font Mono"
+    style: Italic
+
+  # Bold italic font face
+  bold_italic:
+    family: "Hack Nerd Font Mono"
+    style: Bold Italic
+
+  # Point size
+  size: 12.0
+
+  # Offset is the extra space around each character. `offset.y` can be thought of
+  # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
+  offset:
+    x: 0
+    y: 0
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the right,
+  # increasing `y` moves the glyph upwards.
+  glyph_offset:
+    x: 0
+    y: 0
+
+# Window configuration
+window:
+  padding:
+    x: 10
+    y: 10
+  
+# Colors (defaults that look good with the font)
+colors:
+  primary:
+    background: '#282c34'
+    foreground: '#abb2bf'
+
+# Terminal bell
+bell:
+  duration: 0  # Disable the bell sound
+
