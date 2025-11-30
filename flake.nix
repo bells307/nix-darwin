@@ -1,5 +1,5 @@
 {
-  description = "Unified macOS and NixOS configuration";
+  description = "macOS configuration with nix-darwin";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -9,7 +9,7 @@
 
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
 
-    home-manager.url = "github:nix-community/home-manager";
+    home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -20,19 +20,11 @@
         system = "aarch64-darwin";
         specialArgs = { inherit inputs self; };
         modules = [
-          # Host-specific config
-          ./hosts/mac
-
-          # Shared modules
-          ./modules/shared/common.nix
-          ./modules/shared/packages.nix
-
-          # Darwin-specific modules
-          ./modules/darwin
+          # Main Darwin configuration
+          ./darwin.nix
 
           # Homebrew integration
           nix-homebrew.darwinModules.nix-homebrew
-          ./modules/darwin/homebrew.nix
 
           # Home Manager
           home-manager.darwinModules.home-manager
@@ -40,33 +32,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            home-manager.users.bells = import ./modules/shared/home.nix;
-          }
-        ];
-      };
-
-      # NixOS Configuration
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-        system = "aarch64-linux";
-        specialArgs = { inherit inputs self; };
-        modules = [
-          # Host-specific config
-          ./hosts/nixos
-
-          # Shared modules
-          ./modules/shared/common.nix
-          ./modules/shared/packages.nix
-
-          # NixOS-specific modules
-          ./modules/nixos
-
-          # Home Manager
-          home-manager.nixosModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "backup";
-            home-manager.users.bells = import ./modules/shared/home.nix;
+            home-manager.users.bells = import ./home.nix;
           }
         ];
       };

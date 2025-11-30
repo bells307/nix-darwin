@@ -7,17 +7,13 @@
     "$HOME/.cargo/bin"
   ];
 
-  # Dotfile symlinks - platform-independent
-  home.file.".config/nvim".source = ../../configs/nvim;
-  home.file.".tmux.conf".source = ../../configs/tmux.conf;
-  home.file.".zshrc".source = ../../configs/zshrc;
+  # Dotfile symlinks
+  home.file.".config/nvim".source = ./configs/nvim;
+  home.file.".tmux.conf".source = ./configs/tmux.conf;
+  home.file.".zshrc".source = ./configs/zshrc;
+  home.file.".config/alacritty".source = ./configs/alacritty;
 
-  # Alacritty config only on macOS (GUI)
-  home.file.".config/alacritty" = lib.mkIf pkgs.stdenv.isDarwin {
-    source = ../../configs/alacritty;
-  };
-
-  # Rust development environment - platform-independent
+  # Rust development environment
   home.activation.installRustup = lib.hm.dag.entryAfter ["writeBoundary"] ''
     PATH="$HOME/.cargo/bin:${pkgs.curl}/bin:${pkgs.coreutils}/bin:${pkgs.gnugrep}/bin:$PATH"
 
