@@ -25,14 +25,6 @@
   # Shell configuration
   programs.zsh.enable = true;
 
-  # Homebrew configuration
-  nix-homebrew = {
-    enable = true;
-    enableRosetta = true;
-    user = "bells";
-    autoMigrate = true;
-  };
-
   # System packages
   environment.systemPackages = with pkgs; [
     alacritty
