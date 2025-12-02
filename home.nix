@@ -3,11 +3,6 @@
 {
   home.stateVersion = "24.11";
 
-  home.file.".config/nvim" = {
-    source = ./configs/nvim;
-    recursive = true;
-  };
-
   programs.neovim = {
     enable = true;
     defaultEditor = true;
@@ -20,6 +15,7 @@
     ];
   };
 
+  home.file.".config/nvim".source = ./configs/nvim;
   home.file.".tmux.conf".source = ./configs/tmux.conf;
   home.file.".zshrc".source = ./configs/zshrc;
   home.file.".config/kitty".source = ./configs/kitty;
