@@ -19,6 +19,14 @@
         modules = [
           ./darwin.nix
           nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              enable = true;
+              enableRosetta = true;
+              user = "bells";
+              autoMigrate = true;
+            };
+          }
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

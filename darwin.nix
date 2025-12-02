@@ -57,35 +57,65 @@
     stylua
     yazi
     somafm-cli
+    neofetch
   ];
+
+  homebrew = {
+    enable = true;
+    brews = [
+      "mas"
+    ];
+    casks = [
+    ];
+    masApps = {
+      # "Yoink" = 457622435;
+    };
+    onActivation.cleanup = "zap";
+    onActivation.autoUpdate = true;
+    onActivation.upgrade = true;
+  };
 
   # Fonts
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
   ];
 
-  # larger value => slower repeat
-  system.defaults.NSGlobalDomain.KeyRepeat = 1;
-  # larger value => longer delay
-  system.defaults.NSGlobalDomain.InitialKeyRepeat = 12;
+  system.defaults = {
+    dock = {
+      autohide = true;
+      # persistent-apps = [
+      # ];
+    };
 
-  # Disable macOS Spotlight keyboard shortcuts
-  system.defaults.CustomUserPreferences."com.apple.symbolichotkeys" = {
-    AppleSymbolicHotKeys = {
-      # Disable Spotlight search (Cmd+Space)
-      "64" = {
-        enabled = false;
-        value = {
-          parameters = [ 32 49 1048576 ];
-          type = "standard";
+    finder.FXPreferredViewStyle = "clmv";
+    loginwindow.GuestEnabled = false;
+
+    NSGlobalDomain = {
+      # larger value => slower repeat
+      KeyRepeat = 2;
+      # larger value => longer delay
+      InitialKeyRepeat = 12;
+      AppleICUForce24HourTime = true;
+    };
+
+    # Disable macOS Spotlight keyboard shortcuts
+    CustomUserPreferences."com.apple.symbolichotkeys" = {
+      AppleSymbolicHotKeys = {
+        # Disable Spotlight search (Cmd+Space)
+        "64" = {
+          enabled = false;
+          value = {
+            parameters = [ 32 49 1048576 ];
+            type = "standard";
+          };
         };
-      };
-      # Disable Finder search window (Option+Cmd+Space)
-      "65" = {
-        enabled = false;
-        value = {
-          parameters = [ 32 49 1572864 ];
-          type = "standard";
+        # Disable Finder search window (Option+Cmd+Space)
+        "65" = {
+          enabled = false;
+          value = {
+            parameters = [ 32 49 1572864 ];
+            type = "standard";
+          };
         };
       };
     };
