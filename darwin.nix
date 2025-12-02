@@ -69,6 +69,7 @@
     yazi
     somafm-cli
     neofetch
+    just
   ];
 
   homebrew = {
