@@ -82,7 +82,7 @@
 
   system.defaults = {
     dock = {
-      autohide = true;
+      # autohide = true;
       # persistent-apps = [
       # ];
     };
