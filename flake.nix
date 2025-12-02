@@ -32,7 +32,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            home-manager.users.bells = import ./home.nix;
+            home-manager.users.bells = import ./home;
           }
         ];
       };
