@@ -55,7 +55,8 @@
     rustup
     cargo
     stylua
-    wireguard-tools
+    yazi
+    somafm-cli
   ];
 
   # Fonts
@@ -67,6 +68,28 @@
   system.defaults.NSGlobalDomain.KeyRepeat = 1;
   # larger value => longer delay
   system.defaults.NSGlobalDomain.InitialKeyRepeat = 12;
+
+  # Disable macOS Spotlight keyboard shortcuts
+  system.defaults.CustomUserPreferences."com.apple.symbolichotkeys" = {
+    AppleSymbolicHotKeys = {
+      # Disable Spotlight search (Cmd+Space)
+      "64" = {
+        enabled = false;
+        value = {
+          parameters = [ 32 49 1048576 ];
+          type = "standard";
+        };
+      };
+      # Disable Finder search window (Option+Cmd+Space)
+      "65" = {
+        enabled = false;
+        value = {
+          parameters = [ 32 49 1572864 ];
+          type = "standard";
+        };
+      };
+    };
+  };
 
   # Make apps visible to Spotlight
   system.activationScripts.applications.text = let
