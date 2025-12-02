@@ -29,13 +29,13 @@
   # System packages
   environment.systemPackages = with pkgs; [
     # GUI Applications
-    alacritty
+    kitty
     obsidian
     telegram-desktop
     vscode
     orbstack
     google-chrome
-    raycast
+    # raycast
     utm
     chatgpt
 

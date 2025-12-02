@@ -21,5 +21,5 @@
 
   home.file.".tmux.conf".source = ./configs/tmux.conf;
   home.file.".zshrc".source = ./configs/zshrc;
-  home.file.".config/alacritty".source = ./configs/alacritty;
+  home.file.".config/kitty".source = ./configs/kitty;
 }
