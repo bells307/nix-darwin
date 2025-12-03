@@ -71,6 +71,7 @@
     neofetch
     just
     direnv
+    nix-direnv
   ];
 
   homebrew = {

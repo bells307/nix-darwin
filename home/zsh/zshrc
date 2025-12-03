@@ -102,6 +102,7 @@ export EDITOR=nvim
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
+eval "$(direnv hook zsh)"
 
 # Load local customizations if they exist
 [ -f ~/.zshrc-server.local ] && source ~/.zshrc-server.local
