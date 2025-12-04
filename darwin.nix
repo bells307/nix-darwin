@@ -25,6 +25,7 @@
     name = "bells";
     home = "/Users/bells";
     shell = pkgs.zsh;
+    uid = 501;
   };
 
   # Nix configuration
