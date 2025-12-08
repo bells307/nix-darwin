@@ -42,7 +42,6 @@
     # GUI Applications
     kitty
     obsidian
-    telegram-desktop
     vscode
     orbstack
     google-chrome
@@ -86,6 +85,7 @@
       "scroll-reverser"
     ];
     masApps = {
+      "Telegram" = 747648890;
       "Pepper VPN" = 6739161385;
       "WireGuard" = 1451685025;
     };
@@ -100,8 +100,7 @@
   ];
 
   system.defaults = {
-    dock.autohide = true;
-
+    # dock.autohide = true;
     finder.FXPreferredViewStyle = "clmv";
     loginwindow.GuestEnabled = false;
 
