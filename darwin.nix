@@ -70,6 +70,7 @@
     somafm-cli
     neofetch
     just
+    jq
     direnv
     nix-direnv
   ];
