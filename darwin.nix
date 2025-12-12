@@ -61,6 +61,7 @@
     fzf
     zoxide
     claude-code
+    codex
     opencode
     nixfmt
     curl
