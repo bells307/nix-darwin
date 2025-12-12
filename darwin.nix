@@ -27,15 +27,13 @@
   users.users.bells = {
     name = "bells";
     home = "/Users/bells";
-    shell = pkgs.zsh;
+    # shell = pkgs.zsh;
     uid = 501;
   };
 
   nix.settings.experimental-features = "nix-command flakes";
 
   nixpkgs.config.allowUnfree = true;
-
-  programs.zsh.enable = true;
 
   environment.systemPackages = with pkgs; [
     kitty
@@ -46,7 +44,6 @@
     raycast
     utm
     chatgpt
-    zsh
     mkalias
     git
     curl
