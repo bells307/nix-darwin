@@ -63,6 +63,7 @@
     taplo
     lazygit
     rustc
+    rustfmt
     cargo
     rust-analyzer
     stylua
