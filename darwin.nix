@@ -1,6 +1,9 @@
-{ pkgs, config, self, ... }:
-
 {
+  pkgs,
+  config,
+  self,
+  ...
+}: {
   # Host-specific configuration
   networking.hostName = "mac";
   networking.computerName = "mac";
@@ -16,8 +19,8 @@
 
   # Security - Touch ID for sudo (including tmux support)
   security.pam.services.sudo_local = {
-    touchIdAuth = true;  # Enable Touch ID authentication
-    reattach = true;     # Fix Touch ID not working in tmux/screen
+    touchIdAuth = true; # Enable Touch ID authentication
+    reattach = true; # Fix Touch ID not working in tmux/screen
   };
 
   # User definition
@@ -129,7 +132,7 @@
         "64" = {
           enabled = false;
           value = {
-            parameters = [ 32 49 1048576 ];
+            parameters = [32 49 1048576];
             type = "standard";
           };
         };
@@ -137,7 +140,7 @@
         "65" = {
           enabled = false;
           value = {
-            parameters = [ 32 49 1572864 ];
+            parameters = [32 49 1572864];
             type = "standard";
           };
         };
@@ -158,7 +161,7 @@
     env = pkgs.buildEnv {
       name = "system-applications";
       paths = config.environment.systemPackages;
-      pathsToLink = [ "/Applications" ];
+      pathsToLink = ["/Applications"];
     };
   in
     pkgs.lib.mkForce ''
