@@ -32,7 +32,7 @@
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
+            home-manager.useUserPackages = false;
             home-manager.backupFileExtension = "backup";
             home-manager.users.bells = nix-home.homeManagerModules.default;
           }

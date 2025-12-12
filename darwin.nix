@@ -31,54 +31,25 @@
     uid = 501;
   };
 
-  # Nix configuration
   nix.settings.experimental-features = "nix-command flakes";
 
-  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Shell configuration
   programs.zsh.enable = true;
 
-  # System packages
   environment.systemPackages = with pkgs; [
-    # GUI Applications
     kitty
     obsidian
     vscode
     orbstack
     google-chrome
-    # raycast needs vpn to download
     raycast
     utm
     chatgpt
-
-    # CLI Tools
+    zsh
     mkalias
-    neovim
-    tmux
     git
-    fzf
-    zoxide
-    claude-code
-    codex
-    opencode
-    nixfmt
     curl
-    taplo
-    lazygit
-    rustc
-    rustfmt
-    cargo
-    rust-analyzer
-    stylua
-    yazi
-    somafm-cli
-    neofetch
-    just
-    jq
-    direnv
-    nix-direnv
   ];
 
   homebrew = {
@@ -101,7 +72,6 @@
     onActivation.upgrade = true;
   };
 
-  # Fonts
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
   ];
