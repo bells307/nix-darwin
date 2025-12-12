@@ -58,6 +58,7 @@
     fzf
     zoxide
     claude-code
+    opencode
     nixfmt
     curl
     taplo
