@@ -27,7 +27,7 @@
   users.users.bells = {
     name = "bells";
     home = "/Users/bells";
-    # shell = pkgs.zsh;
+    shell = pkgs.zsh;
     uid = 501;
   };
 
