@@ -53,6 +53,7 @@
     enable = true;
     brews = [
       "mas"
+      "cassandra-cpp-driver"
     ];
     casks = [
       "virtualbuddy"
