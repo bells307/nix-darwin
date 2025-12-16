@@ -59,6 +59,7 @@
       "virtualbuddy"
       "steam"
       "scroll-reverser"
+      "battle-net"
     ];
     masApps = {
       "Telegram" = 747648890;
