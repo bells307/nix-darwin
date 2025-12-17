@@ -89,17 +89,14 @@
         ]
       },
       "locked": {
-        "lastModified": 1765986732,
-        "narHash": "sha256-jg1UI0NXBt1cCREJzKI8MjZNN5A5WcK5tQYCfTvlo34=",
-        "owner": "bells307",
-        "repo": "nix-home",
-        "rev": "392cc88acd517bd9f407e351bbb10f9ee98cb518",
-        "type": "github"
+        "lastModified": 1765995468,
+        "narHash": "sha256-87akrlBpxmh8oXOoX79QNpdd4Hg4zqGevNNhx2JkhuU=",
+        "path": "/Users/bells/nix-home",
+        "type": "path"
       },
       "original": {
-        "owner": "bells307",
-        "repo": "nix-home",
-        "type": "github"
+        "path": "/Users/bells/nix-home",
+        "type": "path"
       }
     },
     "nix-homebrew": {

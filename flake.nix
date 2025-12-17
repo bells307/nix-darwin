@@ -8,7 +8,7 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nix-home.url = "github:bells307/nix-home";
+    nix-home.url = "path:/Users/bells/nix-home";
     nix-home.inputs.nixpkgs.follows = "nixpkgs";
   };
 

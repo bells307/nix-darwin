@@ -59,6 +59,7 @@
       "virtualbuddy"
       "steam"
       "scroll-reverser"
+      "rustrover"
     ];
     masApps = {
       "Telegram" = 747648890;
