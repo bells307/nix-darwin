@@ -7,6 +7,7 @@
     ./direnv
     ./opencode
     ./git
+    ./cursor
   ];
 
   home.stateVersion = "24.11";

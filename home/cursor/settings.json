@@ -1,0 +1,7 @@
+{
+    "window.commandCenter": true,
+    "workbench.colorTheme": "Kanagawa Wave",
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    }
+}
