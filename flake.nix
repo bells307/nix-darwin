@@ -8,11 +8,9 @@
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nix-home.url = "path:/Users/bells/nix-home";
-    nix-home.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs @ { self, nixpkgs, nix-darwin, nix-homebrew, home-manager, nix-home }:
+  outputs = inputs @ { self, nixpkgs, nix-darwin, nix-homebrew, home-manager }:
     {
       # macOS Configuration
       darwinConfigurations.mac = nix-darwin.lib.darwinSystem {
@@ -34,7 +32,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = false;
             home-manager.backupFileExtension = "backup";
-            home-manager.users.bells = nix-home.homeManagerModules.default;
+            home-manager.users.bells = import ./home;
           }
         ];
       };

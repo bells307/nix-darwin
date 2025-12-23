@@ -38,7 +38,6 @@
   environment.systemPackages = with pkgs; [
     kitty
     obsidian
-    vscode
     orbstack
     google-chrome
     raycast
@@ -93,6 +92,8 @@
       NSAutomaticPeriodSubstitutionEnabled = false;
       NSAutomaticQuoteSubstitutionEnabled = false;
       NSAutomaticSpellingCorrectionEnabled = false;
+
+      ApplePressAndHoldEnabled = false;
     };
 
     # Disable macOS Spotlight keyboard shortcuts
