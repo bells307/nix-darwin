@@ -3,5 +3,12 @@
     "workbench.colorTheme": "Kanagawa Wave",
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
-    }
+    },
+
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1000,
 }

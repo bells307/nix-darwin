@@ -31,6 +31,7 @@
     cargo
     cargo-nextest
     rust-analyzer
+    rustPlatform.rustLibSrc
     vscode-extensions.vadimcn.vscode-lldb.adapter
     just
     jq
