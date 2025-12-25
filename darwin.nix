@@ -48,6 +48,11 @@
     curl
     nvd
     fzf
+    neovim
+    tmux
+    zsh
+    lazygit
+    direnv
     zoxide
     yazi
     neofetch
@@ -137,14 +142,6 @@
           enabled = false;
           value = {
             parameters = [32 49 1572864];
-            type = "standard";
-          };
-        };
-        # Move focus to next window (Ctrl+Option+Shift+Cmd+Tab)
-        "27" = {
-          enabled = true;
-          value = {
-            parameters = [48 48 1835305];
             type = "standard";
           };
         };
