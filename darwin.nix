@@ -92,6 +92,8 @@
     ];
     masApps = {
       "Telegram" = 747648890;
+      "WhatsApp Messenger" = 310633997;
+      "VK Мессенджер: Контакты и чат" = 6449223858;
       "Pepper VPN" = 6739161385;
       "WireGuard" = 1451685025;
     };
