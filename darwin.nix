@@ -41,6 +41,7 @@
     orbstack
     google-chrome
     raycast
+	betterdisplay
     utm
     chatgpt
     mkalias
@@ -72,6 +73,11 @@
     rust-analyzer
     rustPlatform.rustLibSrc
     vscode-extensions.vadimcn.vscode-lldb.adapter
+    go
+    gopls
+    golangci-lint
+    delve
+    gotools
     just
     jq
     ripgrep
@@ -89,6 +95,7 @@
       "steam"
       "scroll-reverser"
       "cursor"
+      "chatgpt-atlas"
     ];
     masApps = {
       "Telegram" = 747648890;
@@ -126,6 +133,11 @@
       NSAutomaticSpellingCorrectionEnabled = false;
 
       ApplePressAndHoldEnabled = false;
+    };
+
+    # Enable font smoothing
+    CustomUserPreferences.".GlobalPreferences" = {
+      CGFontRenderingFontSmoothingDisabled = false;
     };
 
     # Disable macOS Spotlight keyboard shortcuts
