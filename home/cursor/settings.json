@@ -10,5 +10,5 @@
     "editor.fontSize": 14,
 
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1000,
+    "files.autoSaveDelay": 1000
 }

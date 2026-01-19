@@ -13,3 +13,5 @@ end, { desc = "Toggle word wrap" })
 vim.api.nvim_set_keymap("v", "<C-u>", "<C-u>gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("v", "<C-d>", "<C-d>gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Save file" })
