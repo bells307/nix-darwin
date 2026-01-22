@@ -36,14 +36,6 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    kitty
-    obsidian
-    orbstack
-    google-chrome
-    raycast
-	betterdisplay
-    utm
-    chatgpt
     mkalias
     git
     curl
@@ -96,12 +88,21 @@
       "scroll-reverser"
       "cursor"
       "chatgpt-atlas"
+      "tomatobar"
+      "kitty"
+      "obsidian"
+      "orbstack"
+      "google-chrome"
+      "raycast"
+      "betterdisplay"
+      "utm"
+      "chatgpt"
     ];
     masApps = {
       "Telegram" = 747648890;
       "WhatsApp Messenger" = 310633997;
       "VK Мессенджер: Контакты и чат" = 6449223858;
-      "Pepper VPN" = 6739161385;
+      "Happ - Proxy Utility Plus" = 6746188973;
       "WireGuard" = 1451685025;
     };
     onActivation.cleanup = "zap";
